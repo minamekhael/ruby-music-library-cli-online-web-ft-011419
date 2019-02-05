@@ -46,8 +46,8 @@ class Song
     @@all << self
   end
   
-  def self.create(name)
-    self.new(name).tap do|song|
+  def self.create(song)
+    self.ne(name).tap do|song|
       song.save
   end
     
