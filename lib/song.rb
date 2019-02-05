@@ -45,6 +45,9 @@ class Song
   def save
     @@all << self
   end
+  
+  def self.create
+  end
   def self.new_from_filename(song)
     song_parts = song.split(" - ")
     song_name = song_parts[1]
