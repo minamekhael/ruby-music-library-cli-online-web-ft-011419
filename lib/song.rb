@@ -30,7 +30,6 @@ class Song
     @@all.uniq
   end
 
-
   def self.destroy_all 
     @@all.clear
   end
@@ -41,6 +40,7 @@ class Song
   
   def artist=(artist)
   end
+  
   def genre=(genre)
     @genre = genre
     @genre = genre 
@@ -61,6 +61,7 @@ class Song
   def to_s
     "#{self.artist.name} - #{self.name} - #{self.genre.name}"
   end
+  
   def self.create_from_filename(song)
     self.new_from_filename(song)
   end  
