@@ -46,10 +46,11 @@ class Song
     @@all << self
   end
   
-  def self.create(song)
-    song = Song.new
-    @@all << Song
+  def self.create(name)
+    self.new(name).tap do|song|
+      song.save
   end
+    
   def self.new_from_filename(song)
     song_parts = song.split(" - ")
     song_name = song_parts[1]
