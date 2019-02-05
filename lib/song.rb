@@ -12,10 +12,6 @@ class Song
     self.genre = genre if genre
   end
 
-  def self.create(name, artist = nil, genre = nil)
-    new(name, artist, genre).tap{|s| s.save}
-  end
-
   def self.all
     @@all
   end
