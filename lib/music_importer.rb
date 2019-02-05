@@ -7,6 +7,7 @@ class MusicImporter
     @path = path
   end
 
+#returns all imported file names
   def files
     files = []
     Dir.glob("#{path}/*.mp3").collect do |file|
