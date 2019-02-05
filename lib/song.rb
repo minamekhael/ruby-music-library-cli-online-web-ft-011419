@@ -47,8 +47,9 @@ class Song
   end
   
   def self.create(song)
-    self.ne(name).tap do|song|
-      song.save
+    song = Song.new
+    song.save
+    @@all << song
   end
     
   def self.new_from_filename(song)
